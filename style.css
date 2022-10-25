@@ -1,0 +1,1203 @@
+body{
+    background-color: black;
+    width: 100%;
+    position: relative;
+}
+
+/* nav */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    font-family: 'Jua', sans-serif;
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.side-nav{
+    color: white;
+    display: flex;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.side-nav a{
+    text-decoration: none;
+    color: white;
+    padding: 0px 50px;
+    transition: .3s;
+}
+.side-nav a:hover{
+    color: yellow;
+}
+
+.logo img{
+    height: 50px;
+    margin: 10px;
+    vertical-align: top;
+}
+.news{
+    position: relative;
+}
+.news:hover .drop{
+    display: flex;
+    flex-direction: column;
+}
+.drop{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: -90px;
+    background-color: white;
+    padding: 10px;
+    width: 150px;
+    box-shadow: 3px 3px 3px gray;
+    display: none;
+    text-align: center;
+}
+.drop a{
+    color: black;
+    padding: 0;
+    margin-top: 10px;    
+}
+.drop a:hover{
+    color: red;
+}
+.drop-2{
+    width: 200px;
+    right: 10px;
+}
+.create:hover .drop-2{
+    display: flex;
+    flex-direction: column;
+}
+#menu-switch{
+    display: none;
+
+}
+
+
+
+
+
+/* 背景 */
+.home-bg{
+    background-image: linear-gradient(to top, #7474740d, #2d2d2d);
+}
+/* 跑馬燈 */
+.marqee {
+	height: 150px;
+    margin: 0;
+	position: relative;
+    overflow: hidden;
+}
+.marqee > ul {
+	display: flex;
+	animation: marqee 35s linear infinite;
+	position: absolute;
+}
+.marqee > ul > li {
+	white-space: nowrap;
+    font-size: 120px;
+    margin-top: 30px;
+	margin-right: 80px;
+	font-weight: bold;
+	color: #90CFF1;
+    font-family: 'Jua', sans-serif;
+}
+@keyframes marqee {
+	0% {
+		left: 30%;
+		transform: translateX(0%);
+	}
+	100% {
+		left: 0;
+		transform: translateX(-100%);
+	}
+}
+
+
+/* 輪播圖 */
+.container{
+	width: 210px;
+	height: 140px;
+    margin: auto;
+	position: relative;
+    perspective: 1200px; 	/* 旋轉直徑 */
+}
+#carousel{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	animation: rotation 20s infinite linear;
+}
+#carousel:hover{
+	animation-play-state: paused;
+}
+#carousel figure{
+	display: block;
+	position: absolute;
+	width: 150px;
+	height: 150px;
+    top: 50px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px gray;
+    background: rgb(255, 255, 255);
+	overflow: hidden;
+}
+    #carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+    #carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+    #carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+    #carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+    #carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+    #carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+    #carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+    #carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+    #carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+figure img{
+	cursor: pointer;
+	transition: all .5s ease;
+    width: 100%;
+}
+figure img:hover{
+    transform: scale(1.2,1.2);
+}
+
+@keyframes rotation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}
+.buy-outer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 150px 0px 150px 0px;
+    position: relative;
+}
+.buy-btn{
+    color: black;
+    background-color: yellow;
+    font-family: 'Jua', sans-serif;
+    font-size: 30px;
+    border-radius: 15px;
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    text-decoration: none;
+    position: absolute;
+}
+.buy-btn p{
+    margin: 10px;
+}
+.buy-btn:before{
+    content:counter(circle);
+    z-index: -1;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    color: rgba(0,0,0,0);
+    background-color: blue;
+    position: absolute;
+    transition: .2s ease-in-out;
+    left: 0;
+    top: 0;
+}
+.buy-btn:after{
+    content:counter(circle);
+    z-index: -1;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    color: rgba(0,0,0,0);
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: .2s ease-in-out;
+}
+.buy-btn:hover::after{
+    right: 5px;
+    bottom: 5px;
+}
+.buy-btn:hover::before{
+    left: 5px;
+    top: 5px;
+}
+
+
+
+
+
+/* news */
+.col-6{
+    width: 50%;
+}
+.new-outer{
+    background-color: #d9d9d9;
+    font-family: 'Jua', sans-serif;
+    border-radius: 50px;
+}
+.new{
+    display: flex;
+}
+.new-dir{
+    margin: 50px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.new-dir h5{
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.new-dir p{
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: px;
+}
+.trend{
+    border: 8px double black;
+    margin: 0px 50px 50px 50px;
+}
+.price_times{
+    align-items: center;
+    display: flex;
+    margin: 20px 50px;
+}
+.price{
+    font-size: 100px;
+    margin-top: 10px;
+}
+.times{
+    justify-content: flex-end;
+    font-size: 30px;
+    margin: 0px 50px;
+
+}
+.times img{
+    height: 20px;
+    transform: rotate(-90deg);
+}
+.trend_text{
+    font-size: 32px;
+    letter-spacing: 1;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+.wow_title{
+    font-size: 100px;
+    color: rgb(64, 64, 64);
+    margin-top: 50px;
+}
+.dir-2{
+    position: relative;
+    overflow: hidden;
+}
+.dir-2 img{
+    height: 600px;
+    transform: rotateY(180deg) ;
+    position: absolute;
+    bottom: 0;left: 0;
+}
+
+
+
+
+/* 第二行輪播圖 */
+.title{
+    font-family: 'Jua', sans-serif;
+    font-size: 80px;
+    color: white;
+    text-shadow: 5px 5px rebeccapurple;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.g-card-out{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+@property --rotate {
+    syntax: '<angle>';
+    initial-value: 132deg;
+    inherits: false;
+}
+:root {
+  --g-card-height: 200px;
+  --g-card-width: 200px;
+}
+.g-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.g-card span{
+    margin-top: 40px;
+    font-size: 40px;
+}
+.g-card-1{
+    background-image: url(img/face/angrycute/angrycute-164.png);
+    background-size: contain;
+    opacity: 1;
+}
+.g-card-2{
+    background-image: url(img/face/dizzy/dizzy-271.png);
+    background-size: contain;
+    opacity: 1;
+}
+.g-card-3{
+    background-image: url(img/face/angry/angry-184.png);
+    background-size: contain;
+    opacity: 1;
+}
+.g-card-4{
+    background-image: url(img/face/angrycute/angrycute-30.png);
+    background-size: contain;
+    opacity: 1;
+}
+.g-card {
+    margin: 30px;
+    width: var(--g-card-width);
+    height: var(--g-card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    display: flex;
+    font-size: 20px;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+    font-family: 'Jua', sans-serif;
+    
+    }
+.g-card:hover {
+    color: rgb(0, 0, 0);
+    transition: color .8s;
+    background-image: none;
+    opacity: 1;
+}
+
+.g-card:hover:before, .g-card:hover:after {
+  animation: none;
+}
+.g-card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+.g-card::after {
+  content: "";
+  top: calc(var(--g-card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 150px;
+  width: 200px;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--g-card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+
+/* 排行榜 */
+.rank{
+    padding: 50px 100px ;
+    display: flex;
+    flex-direction: column;
+}
+.rank-1{
+    font-family: 'Jua', sans-serif;  
+    display: flex;
+    border-bottom: 1px gray solid;
+    padding: 20px;
+    color: white;
+    font-size: 25px;
+}
+
+.rank-1 img{
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: .5s;
+}
+.rank-1 img:hover{
+    transform: scale(1.1);
+}
+
+.rk-lineup{
+    font-size: 40px;
+    color: gray;
+}
+
+.rk-lineup, .rk-num, .rk-pri{
+    margin: auto;
+    padding: 0px 40px;
+}
+.rk-num{
+    text-shadow: 2px 2px 0px purple;
+}
+.rk-per{
+    margin: auto;
+    color: green;
+    animation-name: percent;
+    animation-duration: 1s;    
+    animation-iteration-count: infinite;   
+}
+@keyframes percent {
+    0% { 
+        filter: brightness(.2);
+    }
+    100% {
+        filter: brightness(1);  
+    }
+}
+.up{
+    margin: auto;
+}
+.up img{
+    height: 30px;
+    width: 30px;
+    animation-name: upup;
+    animation-duration: .8s;    
+    animation-iteration-count: infinite;    
+}
+@keyframes upup {
+    0% { 
+        filter: brightness(.2);
+    }
+    100% {
+        filter: brightness(1);  
+    }
+}
+
+
+
+
+
+
+
+/* STARE AT THE CAT */
+.card-outer{
+    background-color: #272727;
+    border-radius: 50px;
+}
+.card-outer-1{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Jua', sans-serif;
+}
+.card-outer-2{
+    display: flex;
+    justify-content: center;
+}
+.stare-title{
+    width: 600px;
+    text-shadow: 5px 5px rgb(111, 42, 42);
+}
+.page-number{
+    color: gray;
+    margin: 100px;
+    font-size: 50px;
+    font-family: 'Jua', sans-serif;
+
+}
+.card{
+    width: 250px;
+    border-radius: 10px;
+    margin: 30px;
+    font-family: 'Jua', sans-serif;
+    font-size: 30px;
+    background-color: white;
+    transform: translate(0px ,0px);
+    transition: .2s;
+
+}
+.card:hover{
+    box-shadow: 10px 10px 1px #fa0;
+    transform: translate(-10px,-10px);
+}
+.card img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+.card-number{
+    color: #007abb;
+    margin: 10px 15px;
+}
+.card-price{
+    color: gray;
+    padding: 0px 10px 10px 10px;
+    display: flex;
+}
+.card-price img{
+    height: 30px;
+    width: 30px;
+}
+
+.card-outer-3{
+    color: gray;
+    display: flex;
+    justify-content: end;
+    font-size: 50px;    
+    font-family: 'Jua', sans-serif;
+    padding: 50px;
+}
+
+.card-outer-3 a{
+    text-decoration: none;
+    color: gray;
+    transition: .2s;
+}
+.card-outer-3 a:hover{
+    text-shadow: 3px 3px blue;
+}
+.card-outer-3 img{
+    width: 50px;
+    filter: invert(60%);
+}
+
+
+
+/* video */
+.video{
+    width: 50%;
+    aspect-ratio: 560/315;
+    margin:50px auto;
+}
+.video iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* STORY */
+.storie{
+    background-color: #272727;
+    border-radius: 50px;
+}
+.storie-card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+}
+.story-bg-card{
+    display: flex;
+    height: 250px;
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;   
+    position: relative;
+    transform: translate(0px,0px);
+    transition: .2s;
+
+}
+.story-bg-card:hover{
+    box-shadow: 10px 10px 1px #fa0;
+    transform: translate(-10px,-10px);
+}
+.story-bg-card img{
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+}
+.story-title-p{
+    font-family: 'Jua', sans-serif;
+    width: 200px;
+    margin: 10px;
+}
+.story-title{
+    color: black;
+    font-size: 40px;
+    border-bottom: 1px solid gray;
+}
+.story-title-p p{
+    color: black;
+    font-size: 20px;
+}
+     /* 標籤 */
+.story-label{
+    background-color: #fa0;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    font-family: 'Jua', sans-serif;
+    font-size: 30px;
+    position: absolute;
+    top: -5px;right: -5px;
+}
+/* BUY */
+.container-ftbt{
+    margin: 100px 0px;
+    padding-bottom: 100px;
+}
+.home-footer-btn{
+    font-size: 50px;
+    border-radius: 30px;
+    width: 400px;
+    height: 100px;
+}
+.home-footer-btn:before{
+    content:counter(circle);
+    z-index: -1;
+    width: 400px;
+    height: 100px;
+    border-radius: 30px;
+    color: rgba(0,0,0,0);
+    background-color: blue;
+    position: absolute;
+    transition: .2s ease-in-out;
+    right: 0;
+    top: 0;
+}
+.home-footer-btn:after{
+    content:counter(circle);
+    z-index: -1;
+    width: 400px;
+    height: 100px;
+    border-radius: 30px;
+    color: rgba(0,0,0,0);
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: .2s ease-in-out;
+}
+.home-footer-btn p{
+    margin-top: 30px;
+}
+
+/* 頁尾 */
+
+footer{
+    display: flex;
+    margin: 0 auto;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    height: fit-content;
+    padding: 0;
+    overflow: hidden;
+}
+.ft-btn-2{
+    transition: .5s;
+    filter: brightness(.3);
+}
+.ft-btn-2 img{
+    height: 120px;
+}
+.ft-btn-2:hover{
+    filter: brightness(1);
+}
+.social-icons li{
+    margin: 10px ;
+}
+.social-icons li a{
+    font-size: 40px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: 0.5s ease;
+    text-shadow: 0 0 30px;
+}
+.social-icons li a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: rgba(17,25,40,0);
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.125);
+}
+.social-icons li a:hover{
+    text-shadow: 0 0 0px;
+}
+
+
+
+
+
+
+
+
+
+/* RWD */
+@media screen and (max-width:1024px) {
+    .ham{
+        display: none;
+    }
+    .col-6{
+        width: 50%;
+    }
+    .new-dir{
+        margin: 30px;
+    }
+    .new-dir h5{
+        font-size: 100px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .new-dir p{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .trend{
+        border: 5px double black;
+        margin: 20px;
+    }
+    .price_times{
+        font-size: 25px;
+        margin: 0;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .times{
+        font-size: 12px;
+        margin: 0px;
+        margin-left: 20px;
+
+    }
+    .times img{
+        height: 10px;
+        transform: rotate(-90deg);
+    }
+    .trend_text{
+        font-size: 10px;
+        letter-spacing: 1;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    #menu-switch:checked + .navbar .side-nav{
+        display: block;
+    }
+    .buy-outer{
+        margin: 150px 0px 100px 0px;
+    }
+    /* news */
+ 
+    .new-dir h5{
+        font-size: 20px;
+    }
+    .new-dir p{
+        font-size: 15px;
+    }
+    .price_times{
+        font-size: 40px;
+    }
+    .times{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .times img{
+        height: 20px;
+    }
+    .trend_text{
+        font-size: 15px;
+    }
+    .wow_title{
+        font-size: 60px;
+        width: 200px;
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+    .dir-2 img{
+        height: 250px;
+        left: -10px;
+    }
+
+    /* 第二行輪播圖  */
+    .title{
+        font-size: 60px;
+    }
+    .g-card-out{
+        display: flex;
+    }
+    .g-card{
+        height: 150px;
+        width: 150px;
+    }
+
+
+
+        /* video */
+    .video{
+        width: 90%;
+    }
+    .video iframe{
+        border-radius: 10px;
+    }
+ /* STARE AT THE CAT */
+    .stare-title{
+        width: 300px;
+    }
+    .card-outer-3{
+        font-size: 40px;
+    }
+    .card-outer-3 img{
+        width: 40px;
+    }
+    .card-outer-2{
+        display: flex;
+    }
+    .card{
+        width: 200px;
+    }
+
+    /* STOIRE */
+    .storie-card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .story-bg-card{
+        display: flex;
+        height: 180px;
+        width: 300px;
+        margin: 20px;       
+    }
+    .story-title{
+        margin-top: 40px;
+        font-size: 20px;
+    }
+    .story-title-p p{
+        font-size: 10px;
+    }
+    .story-label{
+        font-size: 20px;
+    }
+
+/* 頁尾 */
+    .ft a{   
+        padding: 1px;
+        margin: 1px;
+
+    }
+}
+
+
+
+
+
+
+  
+
+
+/* 視窗在768以下套用 */
+@media screen and (max-width:767px) {
+    .side-nav{
+        position: absolute;
+        margin: 0;
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        bottom: -200px;
+        width: 100%;
+        text-align: center;      
+        display: none;
+    }
+    .drop-2 ,.drop{
+        width: 100%;
+        left: 0;
+    }
+    .side-nav a{
+        color: black;
+        padding: 0;
+    }
+    .gallery , .news ,.create{
+        padding: 20px 0px;
+    }
+    #menu-switch:checked + .navbar .side-nav{
+        display: block;
+    }
+  
+
+    /* 漢堡 */
+    .ham{
+        width: 40px;
+        height: 40px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        margin:20px;
+        border-radius: 5px;
+        }
+
+    .ham span{
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: black;
+    }
+    .buy-outer{
+        margin: 150px 0px 100px 0px;
+       }
+    /* news */
+    .new-dir{
+        margin: 30px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    .new-dir h5{
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .new-dir p{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .trend{
+        border: 5px double black;
+        margin: 20px;
+    }
+    .price{
+        font-size: 40px;
+    }
+    .price_times{
+        font-size: 25px;
+    }
+    .times{
+        font-size: 12px;
+        margin: 0px;
+        margin-left: 20px;
+    }
+    .times img{
+        height: 10px;
+        transform: rotate(-90deg);
+    }
+    .trend_text{
+        font-size: 10px;
+        letter-spacing: 1;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    .wow_title{
+        font-size: 40px;
+        width: 150px;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .dir-2 img{
+        height: 300px;
+        transform: rotateY(180deg) ;
+        position: absolute;
+        bottom: 0;
+        left: -100px;
+    }
+
+    /* 第二行輪播圖  */
+    .title{
+        font-size: 40px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    .g-card-out{
+        display: flex;
+        flex-wrap: wrap;
+        /* display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center; */
+        margin: auto;
+        margin-left:20px;
+    }
+    .g-card{
+        height: 200px;
+        width: 200px;
+    }
+        /* video */
+    .video{
+        width: 90%;
+    }
+    .video iframe{
+        border-radius: 10px;
+    }
+
+    .stare-title{
+        width: 200px;
+    }
+    .page-number{
+        display: none;
+    }
+    
+    .card-outer-3{
+        font-size: 30px;
+    }
+    .card-outer-3 img{
+        width: 30px;
+    }
+    .card-outer-2{
+        /* display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2,1fr); */
+        display: flex;
+        flex-wrap: wrap;
+
+        padding: 0px;
+    }
+    .card{
+        width: 200px;
+    }
+    .storie-card{
+        display: flex;
+        flex-direction: column;
+    }
+    .story-bg-card{
+        height: 120px;
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .story-title{
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    .story-title-p p{
+        font-size: 10px;
+    }
+    .story-label{
+        font-size: 20px;
+        position: absolute;
+        top: -5px;right: -5px;
+    }
+    .home-footer-btn{
+        font-size: 30px;
+        border-radius: 30px;
+        width: 300px;
+        height: 80px;
+    }
+    .home-footer-btn:before{
+        content:counter(circle);
+        z-index: -1;
+        width: 300px;
+        height: 80px;
+        border-radius: 30px;
+        color: rgba(0,0,0,0);
+        background-color: blue;
+        position: absolute;
+        transition: .2s ease-in-out;
+        right: 0;
+        top: 0;
+    }
+    .home-footer-btn:after{
+        content:counter(circle);
+        z-index: -1;
+        width: 300px;
+        height: 80px;
+        border-radius: 30px;
+        color: rgba(0,0,0,0);
+        background-color: red;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transition: .2s ease-in-out;
+    }
+
+    /* 上面列卡片  */
+    .story-title{
+        font-size: 20px;
+        margin-right: 40px;
+        margin-bottom: 10px;
+    }
+    .story-title-p p{
+        margin: 10px;
+    }
+
+    /* 排行榜 */
+.rank{
+    padding: 20px;
+}
+.rank-1{
+    padding: 20px;
+    font-size: 15px;
+}
+
+.rank-1 img{
+    height: 40px;
+    width: 40px;
+}
+
+
+.rk-lineup{
+    font-size: 20px;
+}
+
+.rk-lineup, .rk-num, .rk-pri{
+    margin: auto;
+    padding: 0px 10px;
+}
+.rk-per{
+    color: green;
+}
+
+.up{
+    margin: auto;
+}
+.up img{
+    height: 10px;
+    width: 10px;    
+}
+
+
+
+
+
+    }
+ 
+    
+    
+    
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css-reset.css">
+    <link rel="stylesheet" href="style-page.css">
+    <!-- 字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <!-- footer-icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <title>login</title>
+</head>
+<body>
+    <!-- 導覽列 -->
+<input type="checkbox" name="" id="menu-switch">
+<div class="navbar">
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+    <!-- 漢堡 -->
+    <label for="menu-switch" class="ham">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!-- 右邊連結 -->
+    <div class="side-nav">
+        <div class="gallery">
+            <a href="gallery.html" >GALLERY</a>
+        </div>
+        <div  class="news">
+            <a href="">NEWS</a>
+            <div class="drop">
+                <a href="about.html">ABOUT</a> 
+                <a href="the-team.html">THE TEAM</a>
+            </div>
+        </div>
+        <div class="create">
+            <a href="">CREATE</a>
+            <div class="drop drop-2">
+                <a href="storie.html">CREATE STOIRE</a> 
+                <a href="">CREATE CATS</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 錢包 -->
+<div class="sticky-cir">
+    <a href="metamask.html" target="_blank">
+        <img src="img/wallet.png" alt="">
+    </a>
+</div>
+
+    
+    <!-- 表格 -->
+<div class="title" data-aos="flip-left">
+    LOGIN
+</div>
+<form action="">
+    <div class="form-l">
+        <p>ACCOUNT</p>
+        <p>PASSWORDS</p>
+    </div>
+    <div class="form-r">
+        <input type="text" name="" id="" placeholder="account..." >
+        <input type="text" name="" id="" placeholder="passwords...">
+    </div>
+    <a href="" class="sign">SIGNUP</a>
+    <a href="" class="login">LOGIN</a>
+</form>
+    <a href="">
+        <img class="forget" src="img/forget.png" alt="">
+    </a>
+<!-- 頁尾 -->
+<footer>
+    <ul class="social-icons social-icons-1">
+        <li>
+            <a href="" style="color:rgb(255, 83, 198)">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </li>
+        <li>
+            <a href="" style="color:red">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </li>
+        <li class="ft-btn-2">
+            <a class="" href="login.html">
+                <img src="img/log-in.png" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="" style="color:#6dd5fa">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a href="" style="color:blue">
+                <i class="fa-brands fa-square-facebook"></i>
+            </a>
+        </li>
+    </ul>
+</footer>
+
+
+
+<!-- 滑動動畫 -->
+<script>
+    AOS.init();
+</script>
+
+<!-- ham-script -->
+<script>
+    $('.menu').click (function(){
+    $(this).toggleClass('open');    
+    });
+  </script>
+    
+</body>
+</html>

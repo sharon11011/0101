@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<style>
+    .social-icons{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        height: fit-content;
+        padding: 0;
+        overflow: hidden;
+    }
+    .social-icons li{
+        margin: 10px ;
+    }
+    .social-icons li a{
+        font-size: 30px;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        position: relative;
+        transition: 0.5s ease;
+        text-shadow: 0 0 30px;
+    }
+    .social-icons li a::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(1px) saturate(180%);
+        -webkit-backdrop-filter: rgba(17,25,40,0);
+        border-radius: 50%;
+        border: 1px solid rgba(255,255,255,0.125);
+    }
+    .social-icons li a:hover{
+        text-shadow: 0 0 0px;
+    }
+
+
+</style>
+
+<body>
+    <ul class="social-icons">
+        <li>
+            <a href="" style="color:rgb(253, 47, 184)">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </li>
+        <li>
+            <a href="" style="color:red">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </li>
+        <li>
+            <a href="" style="color:#6dd5fa">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a href="" style="color:blue">
+                <i class="fa-brands fa-square-facebook"></i>
+            </a>
+        </li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.out{
+    padding: 100px;
+    position: relative;
+    border: 1px solid red;
+
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+
+
+}
+.circle::before{
+    content:counter(circle);
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: rgba(0,0,0,0);
+    background-color: blue;
+    position: absolute;
+    transition: .2s ease-in-out;
+    right: 0;
+    top: 0;
+
+
+}
+.circle::after{
+    content:counter(circle);
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: rgba(0,0,0,0);
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .2s ease-in-out;
+
+}
+.circle:hover::after{
+    left: 5px;
+    bottom: 5px;
+}
+.circle:hover::before{
+    right: 5px;
+    top: 5px;
+}
+
+</style>
+
+
+
+</head>
+
+
+<body>
+   <div class="out">
+       <a href="" class="circle">
+
+       </a>
+   </div>
+</body>
+</html>
+
+
+container-ftbt
+buy-btn home-footer-btn
