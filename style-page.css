@@ -1325,7 +1325,17 @@ iframe{
         height: 80px;
     }
     
-        
+    .gallery-card-outer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 100%;
+    }
+    .gallery-card{
+        margin: 10px;
+    }
+    .more-card-4{
+        display: none;
+    }
 
 
 }

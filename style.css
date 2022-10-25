@@ -177,7 +177,7 @@ figure img:hover{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 100px 0px 150px 0px;
+    margin: 150px 0px 150px 0px;
     position: relative;
 }
 .buy-btn{
@@ -1236,8 +1236,17 @@ footer{
 .social-icons li a:hover{
     text-shadow: 0 0 0px;
 }
+#carousel figure{
 
+	width: 100px;
+	height: 100px;
 
+}
+
+.container{
+	width: 100%;
+    perspective: 1200px; 	/* 旋轉直徑 */
+}
 
 
 
