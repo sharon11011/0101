@@ -1071,8 +1071,164 @@ input[type=radio]{
         transform: rotate(180deg);
     }
 
+    
+    /* 商品內頁 */
+    .com-l{
+        width: 40%;
+        background-color: rgb(33, 33, 33);
+        border-radius: 15px;
+        margin: 20px;
+        padding: 10px;
+        height: 350px;
+    }
+    .com-card-out{
+        height: 50px;
+        color: white;
+        font-family: 'Jua', sans-serif;
+        font-size: 30px;
+        display: flex;
+        justify-content: end;  
+        align-items: center;
+    }
+    .com-card-out img{
+        height: 90%;
+        margin-left: 20px;
+        filter: brightness(.3);
+    }
+    .com-card-out-2{
+        height: 300px;
+        width: 100%;
+    }
+    .com-card-out-2 img{
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+    }
+    .com-r{
+        width: 60%;
+    }
+    .tit-share{
+         display: flex;    
+         justify-content: space-between;
+         padding: 20px;
+    }
+    .tit-link{
+        font-family: 'Jua', sans-serif;
+    }
+    .tit-link a{
+        text-decoration: none;
+        font-size: 30px;
+        color: rgb(98, 106, 255);
+    }
+    .tit-link img{
+        height: 20px;
+        filter: invert(1);
+    }
+    .share-link{
+        border: 1px solid rgb(121, 121, 121);
+        display: inline-block;
+        border-radius: 15px;
+        padding: 10px;
+    }
+    .share-link img{
+        height: 30px;
+        filter: invert(.5);
+        padding: 0px 10px;
+        text-decoration: none;
+    }
+    .tit-view{
+        display: flex;
+        font-family: 'Jua', sans-serif;
+    }
+    .com-title{
+        color: rgb(206, 206, 206);
+        text-decoration: none;
+        font-family: 'Jua', sans-serif;
+        font-size: 25px;
+    }
+    .tit-view p{
+        color: rgb(143, 143, 143);
+        font-size: 25px;
+        padding-left: 100px;
+    }
+    .tit-view img{
+        filter: invert(.5);
+        height: 20px;
+        padding-left: 10px;
+    }
+    .offer{
+        background-color: #353535;
+        margin: 10px;
+        border-radius: 15px;
+    }
+    .offer p{
+        font-size: 30px;
+        color: white;
+        font-family: 'Jua', sans-serif;
+        padding: 20px;
+    }
+    .com-pri{
+        display: flex;
+    
+    }
+    .com-pri img{
+        height: 50px;
+    }
+    .com-pri p{
+        font-size: 25px;
+        color: white;
+    }
+    .add-cart , .make-offer{
+        font-family: 'Jua', sans-serif;
+        font-size: 25px;
+        padding: 5px 30px;
+        margin: 20px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .add-cart{
+        background-color: rgb(136, 136, 255);
+    }
+    
+    /* 下拉選單 */
+    .accordion{
+        background-color: black;
+        width: 200px;
+        margin: 10px auto;
+        font-family: 'Jua', sans-serif
+    }
+    .accordion img{
+        height: 20px;
+        margin: 0px 0px;
+    }
+    .com-content{
+        height: 0px;
+        background-color: #353535;
+        overflow: hidden;
+        transition: .5s;
+    }
+    .com-art{
+        background-color: #353535;
+        border-radius: 15px;
+        margin: 50px;
+    }
+    .title{
+        margin-left: 0;
+    }
+    .title img{
+        height: 50px;
+        filter: invert(1);
+    }
+    .com-more-card{
+        display: grid;
+        grid-template-columns: 2,1fr;
+        padding-bottom: 50px;
+    }
+    .card{
+        margin: 40px auto;
+    }
 
-
+    
 
 
 }
@@ -1420,6 +1576,134 @@ input[type=radio]{
     }
 
 
+/* 商品內頁 */
+.com-sect{
+    display: flex;
+    flex-direction: column;
+    
+}
+.com-l{
+    width: 40%;
+    background-color: rgb(33, 33, 33);
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    height: 280px;
+}
+.com-card-out{
+    height: 70px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: end;  
+    align-items: center;
+}
+.com-card-out img{
+    height: 70%;
+    margin-left:10px;
+}
+.com-card-out-2{
+    height: 200px;
+    width: 100%;
+    margin: auto;
+}
+.com-card-out-2 img{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+.com-r{
+    width: 60%;
+    margin: auto;
+}
+.tit-share{
+     display: flex;    
+     justify-content: space-evenly;
+     padding: 0px;
+}
+.tit-link{
+    font-family: 'Jua', sans-serif;
+    font-size: 12px;
+}
+.tit-link a{
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(98, 106, 255);
+}
+.tit-link img{
+    height: 30px;
+    filter: invert(1);
+}
+.share-link{
+    display: flex;
+    border: 1px solid rgb(121, 121, 121);
+    display: inline-block;
+    border-radius: 15px;
+    padding: 10px;
+}
+.share-link img{
+    height: 30px;
+    filter: invert(.5);
+    padding: 0px 10px;
+    text-decoration: none;
+}
+.tit-view{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Jua', sans-serif;
+}
+.com-title{
+    color: rgb(206, 206, 206);
+    text-decoration: none;
+    font-family: 'Jua', sans-serif;
+    font-size: 30px;
+}
+.tit-view p{
+    color: rgb(143, 143, 143);
+    font-size: 20px;
+    padding-left: 0px;
+    padding-top: 10px;
+}
+.tit-view img{
+    filter: invert(.5);
+    height: 30px;
+    width: 30px;
+    padding-left: 10px;
+}
+.offer{
+    background-color: #353535;
+    margin: 20px;
+    border-radius: 15px;
+}
+.offer p{
+    font-size: 30px;
+    color: white;
+    font-family: 'Jua', sans-serif;
+    padding: 20px;
+}
+.com-pri{
+    display: flex;
+
+}
+.com-pri img{
+    height: 60px;
+}
+.com-pri p{
+    font-size: 30px;
+    color: white;
+}
+.add-cart , .make-offer{
+    font-family: 'Jua', sans-serif;
+    font-size: 25px;
+    padding: 5px 30px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.add-cart{
+    background-color: rgb(136, 136, 255);
+}
 
 
 
