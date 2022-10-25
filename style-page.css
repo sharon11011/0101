@@ -1291,7 +1291,40 @@ iframe{
     iframe{
         border-radius: 15px;
     }
-
+    /* 錢包 */
+    .sticky-cir{
+        background-color: white;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        transition: .5s;
+        position: sticky;
+        top: 300px;
+    }
+    .sticky-cir:hover{
+        width: 110px;
+        height: 110px;
+    }
+    .sticky-cir img{
+        height: 50px;
+        padding: 25px;
+    }
+    .sign , .login{
+        background-color: yellow;
+        color: black;
+        font-family: 'Jua', sans-serif;
+        margin: 10px;
+        padding: 10px 40px;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+    .forget{
+        position: absolute;
+        right: 150px;
+        bottom: 165px;
+        height: 80px;
+    }
+    
         
 
 
@@ -1808,6 +1841,40 @@ iframe{
     
           
 
+    /* 錢包 */
+    .sticky-cir{
+        background-color: white;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        transition: .5s;
+        position: sticky;
+        top: 300px;
+    }
+    .sticky-cir:hover{
+        width: 110px;
+        height: 110px;
+    }
+    .sticky-cir img{
+        height: 50px;
+        padding: 25px;
+    }
+    .sign , .login{
+        background-color: yellow;
+        color: black;
+        font-family: 'Jua', sans-serif;
+        margin: 10px;
+        padding: 10px 40px;
+        border-radius: 10px;
+        text-decoration: none;
+        margin-bottom: 50px;
+    }
+    .forget{
+        position: absolute;
+        right: 50px;
+        bottom: 100px;
+        height: 50px;
+    }
 
 
 
