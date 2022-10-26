@@ -1327,16 +1327,17 @@ iframe{
     
     .gallery-card-outer{
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
         width: 100%;
     }
     .gallery-card{
-        margin: 10px;
+        margin: 20px;
+
     }
     .more-card-4{
         display: none;
     }
-
+ 
 
 }
 
@@ -1886,7 +1887,16 @@ iframe{
         height: 50px;
     }
 
-
+    .gall-card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .story-title-p{
+        width: 120px;
+    }
+    .story-p{
+        width: 200px;
+    }
 
 
 
